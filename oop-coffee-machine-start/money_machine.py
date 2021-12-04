@@ -29,7 +29,7 @@ class MoneyMachine:
 
         self.process_coins()
         change = round(self.money_received - cost, 2)
-        print(f"Cost: {cost}. Change = {change}")
+        # print(f"Cost: {cost}. Change = {change}")
         if change >= 0:
             print(f"Here is {self.CURRENCY}{change} in change.")
             self.profit += cost

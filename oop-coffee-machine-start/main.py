@@ -11,7 +11,8 @@ machine_on_flag = True
 
 while machine_on_flag:
     print(logo)
-    user_choice = input("What would you like? (espresso/latte/cappuccino): ").lower()
+    options = menu.get_items()
+    user_choice = input(f"What would you like? ({options}): ").lower()
     if user_choice == "off":
         print("Switched off!")
         machine_on_flag = False
