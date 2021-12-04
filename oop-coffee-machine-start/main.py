@@ -1,5 +1,6 @@
-from menu import Menu, MenuItem
+from art import logo
 from coffee_maker import CoffeeMaker
+from menu import Menu
 from money_machine import MoneyMachine
 
 myCoffeeMaker = CoffeeMaker()
@@ -7,7 +8,9 @@ myMenu = Menu()
 myMoneyMachine = MoneyMachine()
 
 machine_on_flag = True
+
 while machine_on_flag:
+    print(logo)
     user_choice = input("What would you like? (espresso/latte/cappuccino): ").lower()
     if user_choice == "off":
         print("Switched off!")
