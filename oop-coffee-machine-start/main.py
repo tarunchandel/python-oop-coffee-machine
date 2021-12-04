@@ -3,9 +3,9 @@ from coffee_maker import CoffeeMaker
 from menu import Menu
 from money_machine import MoneyMachine
 
-myCoffeeMaker = CoffeeMaker()
-myMenu = Menu()
-myMoneyMachine = MoneyMachine()
+coffee_maker = CoffeeMaker()
+menu = Menu()
+money_machine = MoneyMachine()
 
 machine_on_flag = True
 
@@ -16,10 +16,10 @@ while machine_on_flag:
         print("Switched off!")
         machine_on_flag = False
     elif user_choice == "report":
-        myCoffeeMaker.report()
-        myMoneyMachine.report()
+        coffee_maker.report()
+        money_machine.report()
     else:
-        myMenuItem = myMenu.find_drink(user_choice)
-        if myCoffeeMaker.is_resource_sufficient(myMenuItem):
-            myMoneyMachine.make_payment(myMenuItem.cost)
-            myCoffeeMaker.make_coffee(myMenuItem)
+        menu_item = menu.find_drink(user_choice)
+        if coffee_maker.is_resource_sufficient(menu_item):
+            money_machine.make_payment(menu_item.cost)
+            coffee_maker.make_coffee(menu_item)
